@@ -1,38 +1,104 @@
-.App {
+.mainBody {
+  display: flex;
   text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainTitle {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wordForms {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.flexBody {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wordsTitle {
+  text-align: left;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.wordBank {
+  text-align: left;
+  background-color: bisque;
+  padding: 20px;
+  width: 200px;
+  height: 500px;
+  overflow-y: auto; 
+  overflow-x: hidden;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.newForm {
+  background-color: bisque;
+  border: none;
+  resize: vertical;
+  vertical-align: top;
+}
+
+.newWord {
+  margin-bottom: 5px;
+  height: 30px;
+  width: 100%;
+}
+
+.newDesc {
+  height: 100px;
+  width: 100%;
+}
+
+.newWordSubmit {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 8px;
+}
+
+button {
+  border: none;
+  background-color: gold;
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+.wordUL {
+  padding-left: 20px;
+}
+
+.listItem {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.listItem button {
+  align-self: flex-start;  /* override stretch, align button to top */
+  height: auto;            /* make height fit content */
+  padding: 5px 10px;       /* keep button padding */
+}
+
+.listItem > div {
+  min-width: 0;               /* allows flex item to shrink */
+  overflow-wrap: break-word;  /* break long words */
+  word-break: break-word;     /* break words if necessary */
+  flex-grow: 1;               /* let it take available space */
+  padding-right: 10px;        /* space between text and button */
 }
